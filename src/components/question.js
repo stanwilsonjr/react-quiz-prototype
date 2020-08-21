@@ -20,25 +20,27 @@ const Answers = styled.section`
     column-gap:10px;
     row-gap: 10px;
     margin: 25px 0;
-    & div:nth-child(${props => props.correct}){
-      background: ${props => (props.submitted)? 'green': "transparent"};
+    & div:nth-child(${props => (props.correct + 1)}){
+      background-color: ${props => (props.submitted)? 'green': "#fff"};
       color: ${props => (props.submitted)? '#fff': "#333"};
-
+      &:hover{
+        background-color: ${props => (props.submitted)? 'green': "#333"};
+        color:#fff;
+      }
     }
     & div{
-        border: 1px solid #333;
-        border-radius: 7px;
+        border-radius: 10px;
         padding: 7px 10px;
-        min-height: 50px;
-        cursor: pointer;
+        min-height: 75px;
+        cursor: ${props => (props.submitted)? 'not-allowed': "pointer"};
+        background-color: #fff;
         font-family: 'Open Sans', sans-serif;
         font-weight:400;
         transition: transform 0.5s linear;
 
         &:hover{
-            background-color: #333;
-            color: #fff;
-            transform: translateY(-4px);
+            background-color: ${props => (props.submitted)? '#fff': "#333"};
+            color: ${props => (props.submitted)? '#333': "#fff"};
         }
     }
 `;
@@ -82,6 +84,7 @@ export default function Question(props) {
       { context.state.submitted  &&
         <ResultSection  result={resultValue} >
           <h3>{context.state.questions[context.state.activeQuestion].answer.explaination}</h3>
+          <div onClick={()=>  context.dispatch({type:"nextQuestion"}) }>   Next Question</div>
         </ResultSection>
       }
 

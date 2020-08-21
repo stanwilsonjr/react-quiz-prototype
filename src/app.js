@@ -10,6 +10,7 @@ import Quiz from "../animalquiz.json";
 
 const QuizWrapper= styled.section`
     max-width: 500px;
+    margin: 50px auto;
  
 `;
 
@@ -45,14 +46,21 @@ export default function App(props) {
   return (
     <Quizcontext.Provider value={{ state, dispatch }}>
       <QuizWrapper>
-        <h1>{state.title}</h1>
+        <h1>{state.title}</h1> 
 
+        {/* <svg viewBox="0 0 36 36">
+                <path
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"
+                  stroke="#444"
+                  stroke-width="1"
+                />
+        </svg> */}
 
       {state.questions.length >= (state.activeQuestion + 1) && 
-        <>
         <Question item={state.questions[state.activeQuestion]}  /> 
-        <div onClick={()=>  dispatch({type:"nextQuestion"}) }>   Next Question</div>
-        </>
       }
       {state.questions.length < (state.activeQuestion + 1) && 
         <Results/> 
