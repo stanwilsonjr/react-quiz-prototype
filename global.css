@@ -2,3 +2,7 @@ body{
     font-family: sans-serif;
     background-color: rgb(246 246 246);
 }
+h1{
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+}

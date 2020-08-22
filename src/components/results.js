@@ -23,7 +23,7 @@ flex-direction: column;
       stroke: #444;
     }
     & text{
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-weight:800;
       font-size: 12px;
     }

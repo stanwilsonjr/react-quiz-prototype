@@ -7,9 +7,16 @@ const QuestionContainer = styled.section`
     display:flex;
     flex-direction: column;
     & h2{
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-weight:800;
-
+    }
+    & div.next{
+      background: #333;
+      color: #fff;
+      padding: 7px;
+      display: inline-block;
+      border-radius: 5px;
+      cursor: pointer;
     }
 `;
 const Answers = styled.section`
@@ -23,6 +30,8 @@ const Answers = styled.section`
     & div:nth-child(${props => (props.correct + 1)}){
       background-color: ${props => (props.submitted)? 'green': "#fff"};
       color: ${props => (props.submitted)? '#fff': "#333"};
+      opacity: 1;
+
       &:hover{
         background-color: ${props => (props.submitted)? 'green': "#333"};
         color:#fff;
@@ -32,17 +41,26 @@ const Answers = styled.section`
         border-radius: 10px;
         padding: 7px 10px;
         min-height: 75px;
+        opacity: ${props => (props.submitted)? '0.5': "1"};
         cursor: ${props => (props.submitted)? 'not-allowed': "pointer"};
         background-color: #fff;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Inter', sans-serif;
         font-weight:400;
         transition: transform 0.5s linear;
-
         &:hover{
             background-color: ${props => (props.submitted)? '#fff': "#333"};
             color: ${props => (props.submitted)? '#333': "#fff"};
         }
+        @keyframes reveal {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+      }
     }
+
 `;
 const ResultSection= styled.section`
     max-width: 500px;
@@ -75,18 +93,19 @@ export default function Question(props) {
   return (
     <QuestionContainer>
       <h2>{item.question}</h2>
-      <Answers correct={activeQuestion.answer.number } submitted={context.state.submitted}>
-        {item.choices.map((c, i) => (
-          <div onClick={() => submitAnswer(i)} key={`choice-${i}`}>{c}</div>
-        ))}
-      </Answers>
-      <span>{context.state.activeQuestion + 1}/{context.state.questions.length} </span>
       { context.state.submitted  &&
         <ResultSection  result={resultValue} >
           <h3>{context.state.questions[context.state.activeQuestion].answer.explaination}</h3>
-          <div onClick={()=>  context.dispatch({type:"nextQuestion"}) }>   Next Question</div>
+          <div className="next" onClick={()=>  context.dispatch({type:"nextQuestion"}) }>   Next Question</div>
         </ResultSection>
       }
+      <Answers  correct={activeQuestion.answer.number } submitted={context.state.submitted}>
+        {item.choices.map((c, i) => (
+          <div onClick={() => submitAnswer(i)} key={`choice-${i}`}  style={{animationDelay: `${i * 0.25}s`}}  >{c}</div>
+        ))}
+      </Answers>
+      <span>{context.state.activeQuestion + 1}/{context.state.questions.length} </span>
+  
 
     </QuestionContainer>
   );
