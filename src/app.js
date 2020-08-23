@@ -30,6 +30,7 @@ export default function App(props) {
 
   useEffect(() => {
     document.body.style.backgroundColor = state.highlightcolor;
+    document.title = state.title;
 
   }, []);
 
