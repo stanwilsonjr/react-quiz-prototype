@@ -1,5 +1,6 @@
 {
-    "title": "Animal Quiz",
+    "title": "🦓 Animal Quiz",
+    "highlightcolor": "rgb(255 215 0)",
     "questions": [
         {
             "question": "What type of animal is a seahorse?",

@@ -2,6 +2,7 @@ body{
     font-family: sans-serif;
     background-color: rgb(246 246 246);
     -webkit-font-smoothing: antialiased;
+    color: rgb(51 51 51);
 }
 h1{
     font-family: 'Bebas Neue', sans-serif;
