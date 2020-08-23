@@ -64,12 +64,16 @@ const Answers = styled.section`
 `;
 const ResultSection= styled.section`
     max-width: 500px;
-
+    display: flex;
+    flex-direction: column;
     & h3{
       border-color:${props => (props.result === 'wrong')? "red" :(props.result == 'right')? "green" : 'transparent'};
       border-width: 0 0  0 5px;
       border-style: solid;
       padding: 5px 5px 5px 10px;
+    }
+    & div{
+      align-self: flex-end;
     }
 `;
 
