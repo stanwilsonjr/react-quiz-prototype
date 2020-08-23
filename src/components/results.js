@@ -25,7 +25,7 @@ flex-direction: column;
     & text{
       font-family: 'Inter', sans-serif;
       font-weight:800;
-      font-size: 12px;
+      font-size: 8px;
     }
 
     @keyframes progress {
@@ -57,7 +57,7 @@ export default function Results() {
             a 15.9155 15.9155 0 0 1 0 31.831
             a 15.9155 15.9155 0 0 1 0 -31.831"
         />
-        <text x="5" y="22.5" class="percentage">{  `${percentageCorrect * 100}%` } </text>
+        <text x="7" y="21.5" class="percentage">{  `${percentageCorrect * 100}%` } </text>
       </svg>
     </ResultsContainer>
   );
