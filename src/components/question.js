@@ -83,6 +83,7 @@ export default function Question(props) {
 
   const context = useContext(Quizcontext);
   const activeQuestion = context.state.questions[context.state.activeQuestion];
+  const previousText  =  (context.state.activeQuestion === 9)? "See your Results" : "Next Question";
 
  
   function submitAnswer(i){
@@ -100,7 +101,7 @@ export default function Question(props) {
       { context.state.submitted  &&
         <ResultSection  result={resultValue} >
           <h3>{context.state.questions[context.state.activeQuestion].answer.explaination}</h3>
-          <div className="next" onClick={()=>  context.dispatch({type:"nextQuestion"}) }>   Next Question</div>
+          <div className="next" onClick={()=>  context.dispatch({type:"nextQuestion"}) }> {previousText}  </div>
         </ResultSection>
       }
       <Answers  correct={activeQuestion.answer.number } submitted={context.state.submitted}>
