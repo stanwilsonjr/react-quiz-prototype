@@ -100,7 +100,7 @@ export default function Question(props) {
       <h2>{item.question}</h2>
       { context.state.submitted  &&
         <ResultSection  result={resultValue} >
-          <h3>{context.state.questions[context.state.activeQuestion].answer.explaination}</h3>
+          <h3>{context.state.questions[context.state.activeQuestion].answer.explanation}</h3>
           <div className="next" onClick={()=>  context.dispatch({type:"nextQuestion"}) }> {previousText}  </div>
         </ResultSection>
       }

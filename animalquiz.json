@@ -6,7 +6,7 @@
             "question": "What type of animal is a seahorse?",
             "answer": {
                 "number": 2,
-                "explaination": "The seahorse is a bony fish. Their bones are located on the outside of their bodies."
+                "explanation": "The seahorse is a bony fish. Their bones are located on the outside of their bodies."
             },
             "choices": [
                 "Crustacean",
@@ -19,7 +19,7 @@
             "question": "Which of the following dog breeds is the smallest?",
             "answer": {
                 "number": 3,
-                "explaination": "The smallest dog breed is the chihuahua. According to American Kennel Club standards, chihuahuas should not weigh more than six pounds."
+                "explanation": "The smallest dog breed is the chihuahua. According to American Kennel Club standards, chihuahuas should not weigh more than six pounds."
             },
             "choices": [
                 "Dachshund",
@@ -32,7 +32,7 @@
             "question": "What color are zebras?",
             "answer": {
                 "number": 1,
-                "explaination": "Zebras have a black base with white stripes."
+                "explanation": "Zebras have a black base with white stripes."
             },
             "choices": [
                 "White with black stripes",
@@ -45,7 +45,7 @@
             "question": "What existing bird has the largest wingspan?",
             "answer": {
                 "number": 3,
-                "explaination": "The wandering albatross has a wingspan that ranges from 8 to 11.5 feet."
+                "explanation": "The wandering albatross has a wingspan that ranges from 8 to 11.5 feet."
             },
             "choices": [
                 "Stork",
@@ -58,7 +58,7 @@
             "question": "What is the biggest animal that has ever lived?",
             "answer": {
                 "number": 0,
-                "explaination": "The blue whale is the largest animal to have ever lived, with recorded lengths up to 100 feet. Their average length is about 70 to 90 feet (three school buses), with an average weight of 100 to 150 tons."
+                "explanation": "The blue whale is the largest animal to have ever lived, with recorded lengths up to 100 feet. Their average length is about 70 to 90 feet (three school buses), with an average weight of 100 to 150 tons."
             },
             "choices": [
                 "Blue whale",
@@ -84,7 +84,7 @@
             "question": "Which of these animals lives the longest?",
             "answer": {
                 "number": 0,
-                "explaination": "The ocean quahog lives up to 400 years. For comparison, the longest-lived Galapagos tortoise was recorded at 177 years old."
+                "explanation": "The ocean quahog lives up to 400 years. For comparison, the longest-lived Galapagos tortoise was recorded at 177 years old."
             },
             "choices": [
                 "Ocean quahog (clam)",
@@ -97,7 +97,7 @@
             "question": "What are female elephants called?",
             "answer": {
                 "number": 2,
-                "explaination": "Female elephants are called cows. Males are called bulls. And the babies are called calves."
+                "explanation": "Female elephants are called cows. Males are called bulls. And the babies are called calves."
             },
             "choices": [
                 "Mares",
@@ -110,7 +110,7 @@
             "question": "Which of the following animals sleeps standing up?",
             "answer": {
                 "number": 1,
-                "explaination": "Flamingos sleep standing up because the salt flats they live on are too caustic for them to sit down."
+                "explanation": "Flamingos sleep standing up because the salt flats they live on are too caustic for them to sit down."
             },
             "choices": [
                 "Gorillas",
@@ -123,7 +123,7 @@
             "question": "What is the fastest water animal?",
             "answer": {
                 "number": 1,
-                "explaination": "The sailfish is the fastest water animal, reaching speeds up to 68 miles per hour."
+                "explanation": "The sailfish is the fastest water animal, reaching speeds up to 68 miles per hour."
             },
             "choices": [
                 "Porpoise",
